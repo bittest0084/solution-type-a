@@ -21,6 +21,14 @@ public class Main {
 	}
 	
 	public static int countClap(int number) {
-		return 0;
+		int count = 0;
+		while(number != 0) {
+			int checkNum = number - (number / 10) * 10;
+			if(checkNum == 3 || checkNum == 6 || checkNum == 9) {
+				count++;
+			}
+			number /= 10;
+		}
+		return count;
 	}
 }
